@@ -1,7 +1,7 @@
 import React, {Component}from 'react';
 import './App.css';
 import Person from './Person/Person';
-
+//add something
 class App extends Component {
   // state 只能通过this.setState()改变
   state = {
