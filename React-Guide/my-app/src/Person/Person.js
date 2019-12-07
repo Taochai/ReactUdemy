@@ -6,9 +6,9 @@ const person = (props)=>{
         <div>
             <p>I am {props.name} and I am {props.age} years old</p>
             <p>{props.children}</p>
-            /*
-                在两个tag之间的内容是props.children,可以放一些复杂的html
-             */
+            // /*
+            //     在两个tag之间的内容是props.children,可以放一些复杂的html
+            //  */
         </div>
     )
 }
