@@ -1,8 +1,16 @@
 import React from 'react'
 
-const person = ()=>{
+const person = (props)=>{
     //JSX中，如果要用javascript， 需要用{}
-    return <p>I am a person and I am {Math.floor(Math.random()*30)} years old</p>
+    return (
+        <div>
+            <p>I am {props.name} and I am {props.age} years old</p>
+            <p>{props.children}</p>
+            /*
+                在两个tag之间的内容是props.children,可以放一些复杂的html
+             */
+        </div>
+    )
 }
 
 // module.exports = person;  运行出错！
