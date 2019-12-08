@@ -1,4 +1,4 @@
-import React, {Component,useState}from 'react';
+import React, {Component}from 'react';
 import './App.css';
 import Person from './Person/Person';
 //add something
@@ -9,10 +9,10 @@ class App extends Component{
     age: 26
   };
 
-  switchNameHandler = ()=>{
+  switchNameHandler = (newAge)=>{
     this.setState({
       name: 'Luna',
-      age:188
+      age:newAge
     })
   };
 
@@ -23,8 +23,8 @@ class App extends Component{
         <div className="App">
           <h1>Hi,I`m a React App</h1>
           <p>This is really working!</p>
-          <button onClick={this.switchNameHandler}>Switch Name</button>
-          <Person name="Eric" age={25}> This is props children </Person>
+          <button onClick={this.switchNameHandler.bind(this,50)}>Switch Name</button>
+          <Person click={this.switchNameHandler.bind(this,60)}  name="Eric" age={25}> This is props children </Person>
           <Person name={this.state.name} age={this.state.age}/>
           {/*<Person/>*/}
         </div>
