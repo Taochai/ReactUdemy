@@ -12,7 +12,7 @@ const person = (props)=>{
         <div>
             <p onClick={props.click}>I am {props.name} and I am {props.age} years old</p>
             <p>{props.children}</p>
-
+            <input type="text" onChange={props.change} value = {props.name}/>    
         </div>
     )
 }
@@ -20,6 +20,6 @@ const person = (props)=>{
 // module.exports = person;  运行出错！
 //
 //
-//
+//input里的value是输入的初始值。
 
 export default person;
